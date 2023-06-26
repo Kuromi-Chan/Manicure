@@ -1,0 +1,572 @@
+﻿<Window x:Class="Kurs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kurs"
+        xmlns:av="http://schemas.microsoft.com/expression/blend/2008" 
+       mc:Ignorable="av"
+        Title="MainWindow" Height="745" Width="1237" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+    <Grid>
+
+
+        <Rectangle HorizontalAlignment="Left" Margin="883,67,0,0" Width="354" Fill="#FFCFA8DD"/>
+
+
+        <Image Margin="978,430,-60,-21" Source="/nails (1).png" Stretch="Fill" Opacity="0.8"/>
+
+
+        <Rectangle HorizontalAlignment="Center" Height="67" VerticalAlignment="Top" Width="1237" Fill="#FFA2ABE8"/>
+
+
+        <TabControl HorizontalAlignment="Center" Height="52" VerticalAlignment="Top" Width="1164" >
+
+            <TabItem Header="Наращивание" >
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="KeyTBox" HorizontalAlignment="Left" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="40" Foreground="Black" FontSize="22" Text="Введите название услуги" FontStyle="Italic" GotFocus="KeyTBox_GotFocus" />
+                    <Button Content="Поиск" HorizontalAlignment="Left" Height="40" Margin="459,34,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_1" />
+
+                    <DataGrid x:Name="NailExtensionGrid" av:ItemsSource="{av:SampleData ItemCount=5}"  Margin="10,117,309,66" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20" SelectionChanged="NailExtensionGrid_SelectionChanged" Background="#1FC5C5C5" >
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Услуга" Width="300" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Материал" Width="160" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Material}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Цена " Width="100" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Длительность" Width="180" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Duration}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Expander HorizontalAlignment="Left" Height="407"  Margin="831,87,0,0" VerticalAlignment="Top" Width="285" IsExpanded="True" Background="#00000000" Foreground="White" FontSize="18" FontWeight="Bold">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Материал:" Foreground="#DD000000" Margin="2,0,3,0"/>
+                                <ComboBox x:Name="MaterialCBox" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black"/>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Длительность до:" Foreground="#DD000000"/>
+                                <ComboBox x:Name="duraionCBox" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="30 минут"/>
+                                    <ComboBoxItem Content="60 минут"/>
+                                    <ComboBoxItem Content="100 минут"/>
+                                    <ComboBoxItem Content="120 минут"/>
+                                    <ComboBoxItem Content="130 минут"/>
+                                    <ComboBoxItem Content="150 минут"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="101.537"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цена до:" Foreground="#DD000000" Margin="0,0,5,0"/>
+                                <ComboBox x:Name="PriceCBox" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="10р"/>
+                                    <ComboBoxItem Content="15р"/>
+                                    <ComboBoxItem Content="20р"/>
+                                    <ComboBoxItem Content="25р"/>
+                                    <ComboBoxItem Content="30р"/>
+                                    <ComboBoxItem Content="40р"/>
+                                    <ComboBoxItem Content="50р"/>
+                                </ComboBox>
+                            </Grid>
+                            <Button x:Name="aplyFilter" Content="Применить фильтр" Margin="0 20 0 0" Click="Button_Click_1" Foreground="#DDFFFFFF" FontSize="16"  />
+                            <Button x:Name="deleteFilter" Content="Сбросить фильтр" Margin="0 20 0 0" Click="deleteFilter_Click" Foreground="#DDFFFFFF" />
+                        </StackPanel>
+                    </Expander>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Маникюр">
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <TextBox x:Name="KeyTBox2" HorizontalAlignment="Left" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="40" Foreground="Black" FontSize="22" Text="Введите название услуги" FontStyle="Italic" GotFocus="KeyTBox2_GotFocus" />
+                    <Button Content="Поиск" HorizontalAlignment="Left" Height="40" Margin="459,34,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_2" />
+
+                    <DataGrid x:Name="ManicuresGrid" av:ItemsSource="{av:SampleData ItemCount=5}" Background="#1FC5C5C5"  Margin="10,117,309,66" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20" SelectionChanged="ManicuresGrid_SelectionChanged" >
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Услуга" Width="300" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Цена " Width="100" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Длительность" Width="180" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Duration}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Expander HorizontalAlignment="Left" Height="407"  Margin="831,117,0,0" VerticalAlignment="Top" Width="285" IsExpanded="True" Background="#00000000" Foreground="White" FontSize="18" FontWeight="Bold">
+                        <StackPanel Orientation="Vertical">
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Длительность до:" Foreground="#DD000000"/>
+                                <ComboBox x:Name="durationCBox2" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="30 минут"/>
+                                    <ComboBoxItem Content="60 минут"/>
+                                    <ComboBoxItem Content="100 минут"/>
+                                    <ComboBoxItem Content="120 минут"/>
+                                    <ComboBoxItem Content="130 минут"/>
+                                    <ComboBoxItem Content="150 минут"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="101.537"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цена до:" Foreground="#DD000000" Margin="0,0,5,0"/>
+                                <ComboBox x:Name="PriceCBox2" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="10р"/>
+                                    <ComboBoxItem Content="15р"/>
+                                    <ComboBoxItem Content="20р"/>
+                                    <ComboBoxItem Content="25р"/>
+                                    <ComboBoxItem Content="30р"/>
+                                </ComboBox>
+                            </Grid>
+                            <Button x:Name="aplyFilter2" Content="Применить фильтр" Margin="0 20 0 0" Click="Button_Click_2"  />
+                            <Button x:Name="deleteFilter2" Content="Сбросить фильтр" Margin="0 20 0 0" Click="deleteFilter2_Click" />
+                        </StackPanel>
+                    </Expander>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Укрепление">
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <TextBox x:Name="KeyTBox3" HorizontalAlignment="Left" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="40" Foreground="Black" FontSize="22" Text="Введите название услуги" FontStyle="Italic" GotFocus="KeyTBox3_GotFocus" />
+                    <Button Content="Поиск" HorizontalAlignment="Left" Height="40" Margin="459,34,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_3" />
+
+                    <DataGrid x:Name="NailStrengtheningsGrid" av:ItemsSource="{av:SampleData ItemCount=5}" Background="#1FC5C5C5"  Margin="10,117,309,66" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20" SelectionChanged="NailStrengtheningsGrid_SelectionChanged" >
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Услуга" Width="300" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Материал" Width="200" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Material}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+                            <DataGridTemplateColumn Header="Цена " Width="100" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Длительность" Width="180" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Duration}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Expander HorizontalAlignment="Left" Height="407"  Margin="831,87,0,0" VerticalAlignment="Top" Width="285" IsExpanded="True" Background="#00000000" Foreground="White" FontSize="18" FontWeight="Bold">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Материал:" Foreground="#DD000000" Margin="2,0,3,0"/>
+                                <ComboBox x:Name="MaterialCBox3" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black"/>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Длительность до:" Foreground="#DD000000"/>
+                                <ComboBox x:Name="durationCBox3" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="30 минут"/>
+                                    <ComboBoxItem Content="60 минут"/>
+                                    <ComboBoxItem Content="100 минут"/>
+                                    <ComboBoxItem Content="120 минут"/>
+                                    <ComboBoxItem Content="130 минут"/>
+                                    <ComboBoxItem Content="150 минут"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="101.537"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цена до:" Foreground="#DD000000" Margin="0,0,5,0"/>
+                                <ComboBox x:Name="PriceCBox3" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="10р"/>
+                                    <ComboBoxItem Content="15р"/>
+                                    <ComboBoxItem Content="20р"/>
+                                    <ComboBoxItem Content="25р"/>
+                                    <ComboBoxItem Content="30р"/>
+                                </ComboBox>
+                            </Grid>
+                            <Button x:Name="aplyFilter23" Content="Применить фильтр" Margin="0 20 0 0" Click="Button_Click_3"  />
+                            <Button x:Name="deleteFilter23" Content="Сбросить фильтр" Margin="0 20 0 0" Click="deleteFilter23_Click" />
+                        </StackPanel>
+                    </Expander>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Покрытие" Background="#1FC5C5C5">
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <TextBox x:Name="KeyTBox4" HorizontalAlignment="Left" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="40" Foreground="Black" FontSize="22" Text="Введите название услуги" FontStyle="Italic" GotFocus="KeyTBox4_GotFocus" />
+                    <Button Content="Поиск" HorizontalAlignment="Left" Height="40" Margin="459,34,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_4" />
+
+                    <DataGrid x:Name="NailCoaingsGrid" av:ItemsSource="{av:SampleData ItemCount=5}" Background="#1FC5C5C5"  Margin="10,117,309,66" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20" SelectionChanged="NailCoaingsGrid_SelectionChanged" >
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Услуга" Width="250" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Материал" Width="150" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Material}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Цена " Width="150" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Длительность" Width="250" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Duration}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Expander HorizontalAlignment="Left" Height="407"  Margin="831,87,0,0" VerticalAlignment="Top" Width="285" IsExpanded="True" Background="#00000000" Foreground="White" FontSize="18" FontWeight="Bold">
+                        <StackPanel Orientation="Vertical">
+                            <Grid Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Материал:" Foreground="#DD000000" Margin="2,0,3,0"/>
+                                <ComboBox x:Name="MaterialCBox4" Height="31" Margin="105,0,10,0" Foreground="Black" Grid.ColumnSpan="2"/>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Длительность до:" Foreground="#DD000000"/>
+                                <ComboBox x:Name="durationCBox4" Grid.Column="1" Height="28" Margin="0,0,10,4" Foreground="Black" VerticalAlignment="Bottom">
+                                    <ComboBoxItem Content="30 минут"/>
+                                    <ComboBoxItem Content="60 минут"/>
+                                    <ComboBoxItem Content="100 минут"/>
+                                    <ComboBoxItem Content="120 минут"/>
+                                    <ComboBoxItem Content="130 минут"/>
+                                    <ComboBoxItem Content="150 минут"/>
+                                </ComboBox>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="101.537"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цена до:" Foreground="#DD000000" Margin="0,0,5,0"/>
+                                <ComboBox x:Name="PriceCBox4" Grid.Column="1" Height="31" Margin="0,0,10,0" Foreground="Black">
+                                    <ComboBoxItem Content="10р"/>
+                                    <ComboBoxItem Content="15р"/>
+                                    <ComboBoxItem Content="20р"/>
+                                    <ComboBoxItem Content="25р"/>
+                                    <ComboBoxItem Content="30р"/>
+                                </ComboBox>
+                            </Grid>
+                            <Button x:Name="aplyFilter22" Content="Применить фильтр" Margin="0 20 0 0" Click="Button_Click_4"  />
+                            <Button x:Name="deleteFilter22" Content="Сбросить фильтр" Margin="0 20 0 0" Click="deleteFilter22_Click" />
+                        </StackPanel>
+                    </Expander>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Дизайны">
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <TextBox x:Name="KeyTBox5" HorizontalAlignment="Left" Margin="59,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" Height="40" Foreground="Black" FontSize="22" Text="Введите название услуги" FontStyle="Italic" />
+                    <Button Content="Поиск" HorizontalAlignment="Left" Height="40" Margin="459,34,0,0" VerticalAlignment="Top" Width="160" Click="Button_Click_5" />
+
+                    <DataGrid x:Name="DesignsGrid" av:ItemsSource="{av:SampleData ItemCount=5}" Background="#1FC5C5C5"  Margin="10,117,309,66" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20" SelectionChanged="DesignsGrid_SelectionChanged" >
+                        <DataGrid.Columns>
+
+                            <DataGridTemplateColumn Header="Услуга" Width="250" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Стиль" Width="150" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Style}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Цвета" Width="250" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Colors}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Цена " Width="150" >
+
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+
+
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Expander HorizontalAlignment="Left" Height="407"  Margin="831,87,0,0" VerticalAlignment="Top" Width="285" IsExpanded="True" Background="#00000000" Foreground="White" FontSize="18">
+                        <StackPanel Orientation="Vertical">
+
+                            <Grid Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цвета:" Foreground="#DD000000" Margin="2,0,3,0" FontWeight="Bold"/>
+                                <ListBox x:Name="ColorListBox" Grid.Column="1" Height="100" Margin="0,0,10,0" Foreground="Black" SelectionMode="Multiple" BorderThickness="1" BorderBrush="#FF838383" FontWeight="Bold">
+                                    <ListBoxItem Content="Красный" />
+                                    <ListBoxItem Content="Зеленый" />
+                                    <ListBoxItem Content="Голубой" />
+                                    <ListBoxItem Content="Желтый" />
+                                    <ListBoxItem Content="Оранжевый" />
+                                    <ListBoxItem Content="Фиолетовый" />
+                                    <ListBoxItem Content="Розовый" />
+                                    <ListBoxItem Content="Синий" />
+                                    <ListBoxItem Content="Черный" />
+                                    <ListBoxItem Content="Белый" />
+                                    <ListBoxItem Content="Серый" />
+                                    <ListBoxItem Content="Коричневый" />
+                                    <ListBoxItem Content="Серебряный" />
+                                    <ListBoxItem Content="Золотой" />
+                                    <ListBoxItem Content="Малиновый" />
+                                    <ListBoxItem Content="Лаймовый" />
+                                    <ListBoxItem Content="Сливовый" />
+                                    <ListBoxItem Content="Салатовый" />
+                                    <ListBoxItem Content="Темно-синий" />
+                                </ListBox>
+                            </Grid>
+                            <Grid Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="100"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Стиль:" Foreground="#DD000000" Margin="2,0,3,0" FontWeight="Bold"/>
+                                <ComboBox x:Name="StyleCB" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black" FontWeight="Bold"/>
+                            </Grid>
+                            <Grid  Margin="0 20 0 0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="101.537"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Цена до:" Foreground="#DD000000" Margin="0,0,5,0" FontWeight="Bold"/>
+                                <ComboBox x:Name="PriceCBox5" Grid.Column="1" Height="25" Margin="0,0,10,0" Foreground="Black" FontWeight="Bold">
+                                    <ComboBoxItem Content="10р"/>
+                                    <ComboBoxItem Content="15р"/>
+                                    <ComboBoxItem Content="20р"/>
+                                    <ComboBoxItem Content="25р"/>
+                                    <ComboBoxItem Content="30р"/>
+                                </ComboBox>
+                            </Grid>
+                            <Button x:Name="aplyFilter212" Content="Применить фильтр" Margin="0 20 0 0" Click="Button_Click_5" Foreground="#DDFFFFFF" FontWeight="Normal" FontSize="16"  />
+                            <Button x:Name="deleteFilter212" Content="Сбросить фильтр" Margin="0 20 0 0" Click="deleteFilter212_Click" Foreground="#DDFFFFFF" />
+                        </StackPanel>
+                    </Expander>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Выбранные услуги" Background="#1FC5C5C5">
+                <Grid  Margin="0,0,0,-668" Width="1116">
+                    <Canvas x:Name="forPrinting" Margin="0,33,292,102">
+                        <DataGrid x:Name="ResultsGrid" av:ItemsSource="{av:SampleData ItemCount=5}" Background="#1FC5C5C5" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="False" SelectionMode="Single" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False" RowDetailsVisibilityMode="Collapsed" FontSize="20"  Height="351" Canvas.Top="73" Width="779" Canvas.Left="27" >
+                            <DataGrid.Columns>
+
+                                <DataGridTemplateColumn Header="Услуга" Width="500" >
+
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Service}" TextWrapping="Wrap" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <DataGridTemplateColumn Header="Цена BYN " Width="200" >
+
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Price}" TextWrapping="Wrap" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+
+
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Label Content="Услуги которые вы выбрали:" Height="40" Width="475" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Label x:Name="ResultPrice" Content="0" HorizontalContentAlignment="Right" Height="37" Width="87" FontSize="24" FontWeight="Bold" Canvas.Left="212" Canvas.Top="499" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Label x:Name="ResultPrice_Copy" Content="Итого к оплате:" Height="37" Width="195" FontSize="24" FontWeight="Bold" Canvas.Top="498" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="27"/>
+                        <Label x:Name="ResultPrice_Copy1" Content="рублей" Height="57" Width="96" FontSize="24" FontWeight="Bold" Canvas.Left="300" Canvas.Top="498" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Canvas>
+                    <Label Content="Войти как администратор:" HorizontalAlignment="Left" Height="40" Margin="826,97,0,0" VerticalAlignment="Top" Width="309" FontSize="22" FontWeight="Bold"/>
+
+                    <Button Content="Печанькать!" HorizontalAlignment="Left" Height="51" Margin="513,536,0,0" VerticalAlignment="Top" Width="267" FontSize="20" Click="Button_Click"/>
+                    <Label Content="Логин:" HorizontalAlignment="Left" Height="40" Margin="838,167,0,0" VerticalAlignment="Top" Width="85" FontSize="18" FontWeight="Bold"/>
+                    <Label Content="Пароль:" HorizontalAlignment="Left" Height="40" Margin="838,212,0,0" VerticalAlignment="Top" Width="85" FontSize="18" FontWeight="Bold"/>
+                    <PasswordBox x:Name="PassTBox" HorizontalAlignment="Left" Margin="932,210,0,0" VerticalAlignment="Top" Width="177" FontSize="18"/>
+                    <TextBox x:Name="LoginTB" HorizontalAlignment="Left" Height="30" Margin="932,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" FontSize="18"/>
+                    <Button Content="Войти" HorizontalAlignment="Left" Margin="885,280,0,0" VerticalAlignment="Top" Width="187" Click="Button_Click_6"/>
+
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="1424,252,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+
+
+    </Grid>
+</Window>
