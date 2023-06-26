@@ -1,0 +1,37 @@
+[
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\manicure\\klassicheskiy.jpg",
+    "Service": "Классический маникюр",
+    "Description": "Маникюр, основанный на традиционных методах обработки ногтей и кутикулы.",
+    "Price": 15.0,
+    "Duration": "45 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\manicure\\evrop.jpg",
+    "Service": "Европейский маникюр",
+    "Description": "Маникюр, при котором акцент делается на обработке кутикулы и формировании естественного вида ногтей.",
+    "Price": 15.0,
+    "Duration": "50 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\manicure\\am.jpg",
+    "Service": "Аппаратный маникюр",
+    "Description": "Маникюр, в котором используются специальные аппараты для обработки ногтей и кутикулы.",
+    "Price": 15.0,
+    "Duration": "60 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\manicure\\brazolskiy-manicure.jpg",
+    "Service": "Бразильский маникюр",
+    "Description": "Маникюр, при котором основное внимание уделяется укреплению ногтей и уходу за кутикулой.",
+    "Price": 15.0,
+    "Duration": "55 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\manicure\\spa-manicure.jpg",
+    "Service": "Spa-маникюр",
+    "Description": "Маникюр, включающий процедуры ухода за ногтями и расслабляющий массаж рук.",
+    "Price": 15.0,
+    "Duration": "75 минут"
+  }
+]

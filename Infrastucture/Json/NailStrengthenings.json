@@ -1,0 +1,50 @@
+[
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\konstrGel.jpg",
+    "Service": "Укрепление конструирующим гелем",
+    "Price": 20.0,
+    "Material": "Гель-лак",
+    "Description": "",
+    "Duration": "120 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\poligel.jpg",
+    "Service": "Укрепление полигелем",
+    "Price": 12.5,
+    "Material": "Фибро-гель",
+    "Description": "",
+    "Duration": "75 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\akrigel.jpg",
+    "Service": "Укрепление акригелем",
+    "Price": 18.0,
+    "Material": "Акриловый гель",
+    "Description": "",
+    "Duration": "100 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\akrpudra.jpg",
+    "Service": "Укрепление акриловой пудрой",
+    "Price": 10.0,
+    "Material": "Акриловый порошок",
+    "Description": "",
+    "Duration": "60 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\bazoj.jpg",
+    "Service": "Укрепление густой базой",
+    "Price": 22.5,
+    "Material": "Каучуковая база",
+    "Description": "",
+    "Duration": "150 минут"
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\ukreplenie\\biogel.jpg",
+    "Service": "Укрепление биогелем",
+    "Price": 25.0,
+    "Material": "Биогель",
+    "Description": "",
+    "Duration": "180 минут"
+  }
+]

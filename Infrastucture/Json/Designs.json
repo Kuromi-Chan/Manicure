@@ -1,0 +1,202 @@
+[
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\1.jpg",
+    "Service": "Маникюр с французским дизайном и стразами",
+    "Price": 10.5,
+    "Style": "Классический",
+    "Colors": "Белый,Золотой",
+    "Description": "Маникюр в стиле французского маникюра с добавлением золотых страз, придающих дополнительный блеск и элегантность."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\2.jpg",
+    "Service": "Маникюр с цветочным принтом",
+    "Price": 10.5,
+    "Style": "Романтический",
+    "Colors": "Розовый,Белый,Зеленый",
+    "Description": "Нежный маникюр с цветочным принтом, создающим романтическую атмосферу и придающим женственность ногтям."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\3.jpg",
+    "Service": "Маникюр с геометрическим узором",
+    "Price": 10.5,
+    "Style": "Современный",
+    "Colors": "Синий,Белый,Черный",
+    "Description": "Стильный маникюр с геометрическим узором, который придает ногтям современный и элегантный вид."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\4.jpg",
+    "Service": "Маникюр с мраморным эффектом",
+    "Price": 10.5,
+    "Style": "Модный",
+    "Colors": "Черный,Белый,Серый",
+    "Description": "Маникюр с эффектом мрамора, создающий элегантный и стильный вид ногтям."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\5.jpg",
+    "Service": "Маникюр с фруктовым дизайном",
+    "Price": 10.5,
+    "Style": "Яркий",
+    "Colors": "Оранжевый,Желтый,Зеленый",
+    "Description": "Яркий маникюр с фруктовым дизайном, добавляющим свежести и игривости ногтям."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\6.jpg",
+    "Service": "Маникюр с абстрактным узором",
+    "Price": 10.5,
+    "Style": "Современный",
+    "Colors": "Розовый,Фиолетовый,Белый",
+    "Description": "Маникюр с абстрактным узором, придающим ногтям неповторимость и оригинальность."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\7.jpg",
+    "Service": "Маникюр с мятным оттенком",
+    "Price": 10.5,
+    "Style": "Пастельный",
+    "Colors": "Мятный,Белый,Золотой",
+    "Description": "Маникюр с нежным мятным оттенком, добавляющим свежести и легкости ногтям."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\8.jpg",
+    "Service": "Маникюр с глиттером",
+    "Price": 10.5,
+    "Style": "Вечерний",
+    "Colors": "Черный,Серебряный",
+    "Description": "Маникюр с использованием глиттера, придающий ногтям блеск и элегантность."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\9.jpg",
+    "Service": "Маникюр с жемчужным покрытием",
+    "Price": 10.5,
+    "Style": "Элегантный",
+    "Colors": "Белый,Жемчужный",
+    "Description": "Маникюр с покрытием, имитирующим жемчуг, придающий ногтям изысканность и шик."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\10.jpg",
+    "Service": "Маникюр с флористическим принтом",
+    "Price": 10.5,
+    "Style": "Пастельный",
+    "Colors": "Розовый,Зеленый,Белый",
+    "Description": "Маникюр с принтом, вдохновленным цветами и растениями, создающий нежный и романтичный образ."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\11.jpg",
+    "Service": "Маникюр в стиле геометрии",
+    "Price": 10.5,
+    "Style": "Современный",
+    "Colors": "Черный,Белый",
+    "Description": "Маникюр с геометрическими узорами, придающий ногтям современность и строгость."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\12.jpg",
+    "Service": "Маникюр с винтажным флером",
+    "Price": 10.5,
+    "Style": "Ретро",
+    "Colors": "Коричневый,Бежевый,Золотой",
+    "Description": "Маникюр, вдохновленный винтажными элементами, придающий ногтям элегантность и изысканность."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\13.jpg",
+    "Service": "Маникюр с голографическим эффектом",
+    "Price": 10.5,
+    "Style": "Футуристический",
+    "Colors": "Фиолетовый,Серебряный,Розовый",
+    "Description": "Маникюр с голографическим эффектом, создающим игривый и яркий образ ногтей."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\14.jpg",
+    "Service": "Маникюр с анималистическим принтом",
+    "Price": 10.5,
+    "Style": "Смелый",
+    "Colors": "Черный,Желтый,Белый",
+    "Description": "Маникюр с принтом, вдохновленным животными, придающий ногтям смелый и стильный вид."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\15.jpg",
+    "Service": "Маникюр с геометрическим френчем",
+    "Price": 10.5,
+    "Style": "Минималистический",
+    "Colors": "Черный,Белый",
+    "Description": "Маникюр с геометрическим френчем, добавляющим ногтям лаконичность и стиль."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\16.jpg",
+    "Service": "Маникюр с морским принтом",
+    "Price": 10.5,
+    "Style": "Летний",
+    "Colors": "Синий,Белый,Зеленый",
+    "Description": "Маникюр с принтом, вдохновленным морской тематикой, придающий ногтям свежесть и легкость."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\17.jpg",
+    "Service": "Маникюр с камуфляжным принтом",
+    "Price": 10.5,
+    "Style": "Строгий",
+    "Colors": "Зеленый,Коричневый,Черный",
+    "Description": "Маникюр с камуфляжным принтом, создающий строгий и стильный образ ногтей."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\18.jpg",
+    "Service": "Маникюр с металлическим отливом",
+    "Price": 10.5,
+    "Style": "Гранж",
+    "Colors": "Серебряный,Медный,Черный",
+    "Description": "Маникюр с металлическим отливом, придающим ногтям холодный и загадочный вид."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\19.jpg",
+    "Service": "Маникюр с живописным принтом",
+    "Price": 10.5,
+    "Style": "Искусство",
+    "Colors": "Многоцветный",
+    "Description": "Маникюр с ярким и живописным принтом, воплощающим идеи искусства на ногтях."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\20.jpg",
+    "Service": "Маникюр с зебриной полосой",
+    "Price": 10.5,
+    "Style": "Стильный",
+    "Colors": "Черный,Белый",
+    "Description": "Маникюр с зебриной полосой, добавляющий ногтям модный и современный вид."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\21.jpg",
+    "Service": "Маникюр с пастельными оттенками",
+    "Price": 10.5,
+    "Style": "Нежный",
+    "Colors": "Розовый,Лавандовый,Мятный",
+    "Description": "Маникюр с пастельными оттенками, создающий романтическую и нежную атмосферу."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\22.jpg",
+    "Service": "Маникюр с лунным дизайном",
+    "Price": 10.5,
+    "Style": "Модный",
+    "Colors": "Белый,Черный",
+    "Description": "Маникюр с оригинальным лунным дизайном, придающий ногтям стильный и современный вид."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\23.jpg",
+    "Service": "Маникюр с эффектом каменной текстуры",
+    "Price": 10.5,
+    "Style": "Ультрамодный",
+    "Colors": "Серый,Металлический",
+    "Description": "Маникюр с эффектом каменной текстуры, добавляющий ногтям необычность и стильность."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\24.jpg",
+    "Service": "Маникюр с глиттером и стразами",
+    "Price": 10.5,
+    "Style": "Вечерний",
+    "Colors": "Золотой,Серебряный",
+    "Description": "Маникюр с блестками и стразами, создающий праздничный и гламурный образ ногтей."
+  },
+  {
+    "Img": "C:\\Users\\bizyu\\source\\repos\\Kurs\\bin\\Debug\\images\\designs\\25.jpg",
+    "Service": "Маникюр с акварельным дизайном",
+    "Price": 10.5,
+    "Style": "Творческий",
+    "Colors": "Многоцветный",
+    "Description": "Маникюр с акварельным дизайном, позволяющий создать уникальные и яркие образы на ногтях."
+  }
+]
